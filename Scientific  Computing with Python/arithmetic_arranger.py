@@ -52,11 +52,11 @@ def arithmetic_arranger(problems, showRes=False):
 
 def format(num1, operator, num2, showRes):
   maxLen = max(len(num1), len(num2))+OPERATOR_SPACE
-  res = [num1.rjust(maxLen), operator + ' ' + num2.rjust(maxLen-OPERATOR_SPACE),           "".rjust(maxLen, '-')]
+  res = [num1.rjust(maxLen), operator + ' ' + num2.rjust(maxLen-OPERATOR_SPACE), "".rjust(maxLen, '-')]
   if showRes:
     num1 = int(num1)
     num2 = int(num2)
     res.append(str((num1+num2) if operator == '+' else (num1-num2)).rjust(maxLen))
   return res
 
-print(arithmetic_arranger(['11 + 4', '3801 - 2999', '1 + 2', '123 + 49', '1 - 9380'], True))
+print(arithmetic_arranger(['11 + 4', '3801 - 2999', '1 + 2', '123 + 49', '1 - 9380'], True))  #example
